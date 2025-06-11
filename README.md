@@ -1,73 +1,100 @@
-# Air-Quality-Index-Prediction
-AQI Prediction Model
-This project focuses on building a machine learning model to predict the Air Quality Index (AQI) based on various air pollutants. It uses regression techniques to estimate the AQI, which can help in environmental monitoring and public health awareness.
+# 🌫️ Air-Quality-Index (AQI) Prediction
 
-📌 Objective
-To predict the Air Quality Index (AQI) using various environmental pollutant measurements such as NO, NO2, PM2.5, CO, SO2, and others.
+A machine learning project to **predict the Air Quality Index (AQI)** based on concentrations of various environmental pollutants. The goal is to help with **environmental monitoring** and promote **public health awareness** by estimating AQI from real-world pollution data.
 
-📂 Dataset
-Source: The dataset appears to be a CSV file containing various pollutant metrics.
+---
 
-Features Used:
+## 📌 Objective
 
-PM2.5, PM10, NO, NO2, NOx, NH3, CO, SO2, O3, Benzene, Toluene, Xylene
+To build a regression-based model that predicts the **Air Quality Index (AQI)** using air pollutant measurements such as:
 
-Target Variable:
+- PM2.5  
+- PM10  
+- NO  
+- NO2  
+- NOx  
+- NH3  
+- CO  
+- SO2  
+- O3  
+- Benzene  
+- Toluene  
+- Xylene
 
-AQI (Air Quality Index)
+---
 
-Note: The dataset is assumed to be pre-cleaned and available in the same directory as the notebook. If not, make sure to include the dataset or link its source in your repository.
+## 📂 Dataset
 
-🛠️ Technologies Used
-Python
+- **Source:** CSV file (local or from a public source)  
+- **Type:** Tabular data containing pollutant readings and AQI  
+- **Target Variable:** `AQI` (Air Quality Index)
 
-Jupyter Notebook
+> 💡 Ensure the dataset is placed in the same directory as the notebook, or provide a proper link/source in the repo.
 
-Scikit-learn
+---
 
-Pandas
+## 🛠️ Technologies Used
 
-NumPy
+- **Language:** Python  
+- **Environment:** Jupyter Notebook  
+- **Libraries:**
+  - `scikit-learn`
+  - `pandas`
+  - `numpy`
+  - `matplotlib`
+  - `seaborn`
 
-Matplotlib
+---
 
-Seaborn
+## 🔍 Exploratory Data Analysis (EDA)
 
-🔍 Exploratory Data Analysis (EDA)
-The notebook performs:
+Performed steps include:
 
-Checking for null values
+- Checking for **null values**
+- Verifying **data types**
+- Plotting **distribution graphs**
+- Creating **correlation matrix heatmaps**
 
-Data type verification
+These help to understand data quality and relationships between features and the target.
 
-Distribution plots
+---
 
-Correlation matrix heatmap
+## 📈 Model Building
 
-These steps help in understanding the relationship between pollutants and AQI.
+### 🔧 Algorithms Used:
+- **Linear Regression**
+- **K-Nearest Neighbors (KNN)**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
 
-📈 Model Building
-Algorithms Used:
-Linear Regression
+### 🚀 Workflow:
+1. Load and explore the dataset  
+2. Handle missing values (if any)  
+3. Select features and target  
+4. Split data into **training** and **testing** sets  
+5. Train models on the training set  
+6. Evaluate using metrics:
+   - **R² Score**
+   - **Mean Absolute Error (MAE)**
+   - **Root Mean Square Error (RMSE)**
 
-Random Forest Regressor
+---
 
-Workflow:
-Load and explore the data.
+## 📊 Results
 
-Handle missing values.
+| Model                    | R² Score (Test) |
+|--------------------------|-----------------|
+| Linear Regression         | **0.65**        |
+| K-Nearest Neighbors       | **0.76**        |
+| Decision Tree Regressor  | **0.69**        |
+| Random Forest Regressor  | **0.84**        |
 
-Feature and target selection.
+✅ The **Random Forest Regressor** delivered the best performance, showing excellent generalization and prediction accuracy on test data.
 
-Split the data into training and test sets.
+---
 
-Model training using Linear Regression and Random Forest.
+## 📎 Conclusion
 
-Evaluate models using metrics like R² score, MAE, and RMSE.
+This project demonstrates how various regression algorithms can be applied to **predict AQI from pollutant data**. Among all, **Random Forest Regressor** gave the most accurate results. Such models can be integrated into real-world **air quality monitoring systems**, **smart city platforms**, and **health alert services** to support better environmental decisions and public safety.
 
-📊 Results
-Model	R² Score (Test)
-Linear Regression	~0.72
-Random Forest	~0.91
-Random Forest Regressor outperformed Linear Regression with better generalization and accuracy.
-
+---
